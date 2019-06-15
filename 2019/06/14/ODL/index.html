@@ -10,6 +10,8 @@
 
     <!--Description-->
     
+        <meta name="description" content="ODL architecture:Adopt MDSAL, use MAVEN for project construction, and use KARAF as OSGI implementation to complete modular functions.ODL’s three major">
+    
 
     <!--Author-->
     
@@ -18,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="All tags">
+        <meta property="og:title" content="ODL">
     
 
     <!--Open Graph Description-->
@@ -40,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>All tags - Yuyang Chen&#39;s Blog</title>
+    <title>ODL - Yuyang Chen&#39;s Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -68,9 +70,6 @@
 <body>
 
 <!-- Main Content -->
-<!-- Check if it is a root tag or category page -->
-
-
 <!-- Banner -->
 <!-- Banner -->
 <div class="w-100 bg-1 ph5-ns ph3 text-light">
@@ -107,8 +106,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">All tags</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns"></p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">ODL</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-06-14</p>
         </div>
     </div>
 
@@ -118,25 +117,85 @@
     </div>
 </div>
 
-
-    <!-- Content -->
-    <div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
-        <div class="content">
-            <div class="mw8 center">
-                
+<!-- Content -->
+<div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
+    <div class="content">
+        <div class="mw8 center">
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
                     
-                       <a href="/tags/OpenDayLight-SDN-Controller-Learning/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy mh4">#OpenDayLight SDN Controller Learning<span>
-        </span></span></div>
-    </div>
-</a>
-                   
-                
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/OpenDayLight-SDN-Controller-Learning/">#OpenDayLight SDN Controller Learning</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h3 id="ODL-architecture"><a href="#ODL-architecture" class="headerlink" title="ODL architecture:"></a>ODL architecture:</h3><p>Adopt MDSAL, use MAVEN for project construction, and use KARAF as OSGI implementation to complete modular functions.<br>ODL’s three major APIs: RPC, data storage, notification</p>
+<p>The general process of project construction: </p>
+<ol>
+<li>First define the Yang file in the API file, and generate the API, </li>
+<li>Then use and implement the API in IMPL, complete the programming implementation, </li>
+<li>Then load the registration bundle in the drawing file, which takes effect when karaf is started.</li>
+</ol>
+<p>The main function of MD-SAL is to manage various plugins based on the Yang model definition.</p>
+<h3 id="MAVEN-Foundation"><a href="#MAVEN-Foundation" class="headerlink" title="MAVEN Foundation:"></a>MAVEN Foundation:</h3><p>Maven is a project management tool that includes a Project Object Model, a set of standard collections, a Project Lifecycle, a Dependency Management System, and a run definition. The logic of the plugin (plugin) target (target) in the lifecycle phase (first phase).<br>Maven installation directory<br><img src="/images/ODL-1.jpg" alt></p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/OpenDayLight-SDN-Controller-Learning/">#OpenDayLight SDN Controller Learning</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5">
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/img.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Yuyang Chen">
+        </div>
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Yuyang Chen. My interested area is SDN and embedded system development. Proficient in C/C++ and Java
+        </div>
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5">
+                    
+                    <!-- Widget 2: Categories -->
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2019/06/14/ODL/">ODL</a>
+        </p>
+    
+        <p>
+            <a href="/2019/05/14/hello-world/">My First Blog</a>
+        </p>
+    
+</div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
 
 <!-- Footer -->
