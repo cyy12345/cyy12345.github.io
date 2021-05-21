@@ -10,7 +10,15 @@
 
     <!--Description-->
     
-        <meta name="description" content="This is my first time to build a blog. I think I will post some of my study experience on this blog.">
+        <meta name="description" content="Chapter 6There are five different models for I/O provided by Unix:
+
+Blocking
+Nonblocking
+I/O multiplexing
+Signal-driven I/O
+Asynchronous I/O
+
+6.3 “sel">
     
 
     <!--Author-->
@@ -20,7 +28,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="My First Blog">
+        <meta property="og:title" content="UNP Chapter6 Notes">
     
 
     <!--Open Graph Description-->
@@ -42,7 +50,7 @@
 
     <!-- Title -->
     
-    <title>My First Blog - Yuyang Chen&#39;s Blog</title>
+    <title>UNP Chapter6 Notes - Yuyang Chen&#39;s Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -106,8 +114,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">My First Blog</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-05-14</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">UNP Chapter6 Notes</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-05-10</p>
         </div>
     </div>
 
@@ -125,12 +133,30 @@
                 <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
                     <!-- Tags Vertical -->
                     
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/UNP/">#UNP</a> <a class="fw3 ph1 dib" href="/tags/C/">#C++</a> <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
+                            </div>
+                        </div>
+                    
 
                     <!-- Main Post Content -->
-                    <p>This is my first time to build a blog. I think I will post some of my study experience on this blog.</p>
+                    <h2 id="Chapter-6"><a href="#Chapter-6" class="headerlink" title="Chapter 6"></a>Chapter 6</h2><p>There are five different models for I/O provided by Unix:</p>
+<ul>
+<li>Blocking</li>
+<li>Nonblocking</li>
+<li>I/O multiplexing</li>
+<li>Signal-driven I/O</li>
+<li>Asynchronous I/O</li>
+</ul>
+<h3 id="6-3-“select”-function"><a href="#6-3-“select”-function" class="headerlink" title="6.3 “select” function"></a>6.3 “select” function</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/select.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/time.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">select</span><span class="params">(<span class="keyword">int</span> maxfdp1, fd_set *readset, fd_set *writeset, fd_set *exceptset, <span class="keyword">const</span> struct timeval *timeout)</span></span>;</span><br><span class="line"><span class="comment">//Returns: positive count of ready descriptors, 0 on timeout, –1 on error</span></span><br></pre></td></tr></table></figure>
 
                     
                     <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/UNP/">#UNP</a> <a class="fw3 ph1 dib" href="/tags/C/">#C++</a> <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
+                        </div>
                     
 
                     <!-- Comments -->
@@ -158,6 +184,18 @@
                     <hr class="dn-l mw4 black-50 mt5">
                     
                     <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/Reading-notes/">Reading notes</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5">
                     
 
                     <!-- Widget 3: Recent Posts -->

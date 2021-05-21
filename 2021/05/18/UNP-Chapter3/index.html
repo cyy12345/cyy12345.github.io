@@ -10,7 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="This is my first time to build a blog. I think I will post some of my study experience on this blog.">
+        <meta name="description" content="Chapter 33.1  IntroductionThis chapter begins the description of the sockets API. We begin with socket address structures, which will be found in almo">
     
 
     <!--Author-->
@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="My First Blog">
+        <meta property="og:title" content="UNP Chapter3 Notes">
     
 
     <!--Open Graph Description-->
@@ -42,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>My First Blog - Yuyang Chen&#39;s Blog</title>
+    <title>UNP Chapter3 Notes - Yuyang Chen&#39;s Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -106,8 +106,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">My First Blog</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-05-14</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">UNP Chapter3 Notes</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-05-18</p>
         </div>
     </div>
 
@@ -125,12 +125,24 @@
                 <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
                     <!-- Tags Vertical -->
                     
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/UNP/">#UNP</a> <a class="fw3 ph1 dib" href="/tags/C/">#C++</a> <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
+                            </div>
+                        </div>
+                    
 
                     <!-- Main Post Content -->
-                    <p>This is my first time to build a blog. I think I will post some of my study experience on this blog.</p>
-
+                    <h2 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3"></a>Chapter 3</h2><h3 id="3-1-Introduction"><a href="#3-1-Introduction" class="headerlink" title="3.1  Introduction"></a>3.1  Introduction</h3><p>This chapter begins the description of the sockets API. We begin with socket address structures, which will be found in almost every example in the text.<br>The address conversion functions convert between a text representation of an address and the binary value that goes into a socket address structure.</p>
+<h3 id="3-2-Socket-Address-Structures"><a href="#3-2-Socket-Address-Structures" class="headerlink" title="3.2 Socket Address Structures"></a>3.2 Socket Address Structures</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> &#123;</span></span><br><span class="line"> <span class="keyword">in_addr_t</span> s_addr; <span class="comment">/* 32-bit IPv4 address */</span></span><br><span class="line"> <span class="comment">/* network byte ordered */</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> &#123;</span></span><br><span class="line"> <span class="keyword">uint8_t</span> sin_len; <span class="comment">/* length of structure (16) */</span></span><br><span class="line"> <span class="keyword">sa_family_t</span> sin_family; <span class="comment">/* AF_INET */</span></span><br><span class="line"> <span class="keyword">in_port_t</span> sin_port; <span class="comment">/* 16-bit TCP or UDP port number */</span></span><br><span class="line"> <span class="comment">/* network byte ordered */</span></span><br><span class="line"> <span class="class"><span class="keyword">struct</span> <span class="title">in_addr</span> <span class="title">sin_addr</span>;</span> <span class="comment">/* 32-bit IPv4 address */</span></span><br><span class="line"> <span class="comment">/* network byte ordered */</span></span><br><span class="line"> <span class="keyword">char</span> sin_zero[<span class="number">8</span>]; <span class="comment">/* unused */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>The generic socket address structure: sockaddr.<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr</span> &#123;</span></span><br><span class="line"> <span class="keyword">uint8_t</span> sa_len;</span><br><span class="line"> <span class="keyword">sa_family_t</span> sa_family; <span class="comment">/* address family: AF_xxx value */</span></span><br><span class="line"> <span class="keyword">char</span> sa_data[<span class="number">14</span>]; <span class="comment">/* protocol-specific address */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sockaddr_in</span> <span class="title">serv</span>;</span> <span class="comment">/* IPv4 socket address structure */</span></span><br><span class="line"><span class="comment">/* fill in serv&#123;&#125; */</span></span><br><span class="line">bind(sockfd, (struct sockaddr *) &amp;serv, <span class="keyword">sizeof</span>(serv));</span><br></pre></td></tr></table></figure>
                     
                     <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/UNP/">#UNP</a> <a class="fw3 ph1 dib" href="/tags/C/">#C++</a> <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
+                        </div>
                     
 
                     <!-- Comments -->
@@ -158,6 +170,18 @@
                     <hr class="dn-l mw4 black-50 mt5">
                     
                     <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/Reading-notes/">Reading notes</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5">
                     
 
                     <!-- Widget 3: Recent Posts -->

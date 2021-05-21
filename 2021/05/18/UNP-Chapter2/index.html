@@ -10,7 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="This is my first time to build a blog. I think I will post some of my study experience on this blog.">
+        <meta name="description" content="Chapter 22.1  IntroductionThis chapter provides an overview of the protocols in the TCP/IP suite that are used in the examples throughout the book. Ou">
     
 
     <!--Author-->
@@ -20,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="My First Blog">
+        <meta property="og:title" content="UNP Chapter2 Notes">
     
 
     <!--Open Graph Description-->
@@ -42,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>My First Blog - Yuyang Chen&#39;s Blog</title>
+    <title>UNP Chapter2 Notes - Yuyang Chen&#39;s Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -106,8 +106,8 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns">My First Blog</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2019-05-14</p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">UNP Chapter2 Notes</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-05-18</p>
         </div>
     </div>
 
@@ -125,12 +125,33 @@
                 <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
                     <!-- Tags Vertical -->
                     
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/UNP/">#UNP</a> <a class="fw3 ph1 dib" href="/tags/C/">#C++</a> <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
+                            </div>
+                        </div>
+                    
 
                     <!-- Main Post Content -->
-                    <p>This is my first time to build a blog. I think I will post some of my study experience on this blog.</p>
+                    <h2 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a>Chapter 2</h2><h3 id="2-1-Introduction"><a href="#2-1-Introduction" class="headerlink" title="2.1  Introduction"></a>2.1  Introduction</h3><p>This chapter provides an overview of the protocols in the TCP/IP suite that are used in the examples throughout the book. Our goal is to provide enough detail from a network programming perspective to understand how to use the protocols and provide references to more detailed descriptions of their actual design, implementation, and history.<br>Most importantly, I need to figure out some of the details about TCP to write a robust networking program.</p>
+<h3 id="2-2-The-Big-Picture"><a href="#2-2-The-Big-Picture" class="headerlink" title="2.2 The Big Picture"></a>2.2 The Big Picture</h3><p><img src="/images/Big-Picture.png" alt></p>
+<h3 id="2-6-TCP-Connection-Establishment-and-Termination"><a href="#2-6-TCP-Connection-Establishment-and-Termination" class="headerlink" title="2.6 TCP Connection Establishment and Termination"></a>2.6 TCP Connection Establishment and Termination</h3><h4 id="Three-Way-Handshake"><a href="#Three-Way-Handshake" class="headerlink" title="Three-Way Handshake"></a>Three-Way Handshake</h4><p><img src="/images/Threeway-Handshake.png" alt><br>One of the essential question about TCP Three-Way Handshake is: why do we need this? Why not 2 way or 4 way?<br>The first message is from client to let server know that client wants to establish a connection. It’s a SYN segment<br>Then server should reply with a ACK message. This message is sent with a server’s SYN segement. After these two steps, client should know that the connection/path to and from server are good to go.<br>But Server is not sure about this connection since it hasn’t received a reply from client for its SYN segment. Hence, the third segment need to be sent from client to server which is a ACK segment.<br>After this three-way handshake, the connection is established successfully.</p>
+<h4 id="TCP-state-Transition-Diagram"><a href="#TCP-state-Transition-Diagram" class="headerlink" title="TCP state Transition Diagram"></a>TCP state Transition Diagram</h4><p><img src="/images/TCP-states.png" alt></p>
+<h3 id="2-7-TIME-WAIT-State"><a href="#2-7-TIME-WAIT-State" class="headerlink" title="2.7 TIME_WAIT State"></a>2.7 TIME_WAIT State</h3><p>MSL (Maximum segment lifetime)：  The MSL is the maximum amount of time that any given IP datagram can live in a network.</p>
+<p>There are two reasons for the TIME_WAIT state:</p>
+<ol>
+<li>To implement TCP’s full-duplex connection termination reliably</li>
+<li>To allow old duplicate segments to expire in the network</li>
+</ol>
+<h3 id="2-11-Buffer-Sizes-and-Limitations"><a href="#2-11-Buffer-Sizes-and-Limitations" class="headerlink" title="2.11 Buffer Sizes and Limitations"></a>2.11 Buffer Sizes and Limitations</h3><p>MTU and fragmentation</p>
+<h4 id="TCP-Output"><a href="#TCP-Output" class="headerlink" title="TCP Output"></a>TCP Output</h4><p><img src="/images/TCP-output.png" alt></p>
 
                     
                     <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/UNP/">#UNP</a> <a class="fw3 ph1 dib" href="/tags/C/">#C++</a> <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
+                        </div>
                     
 
                     <!-- Comments -->
@@ -158,6 +179,18 @@
                     <hr class="dn-l mw4 black-50 mt5">
                     
                     <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/Reading-notes/">Reading notes</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5">
                     
 
                     <!-- Widget 3: Recent Posts -->

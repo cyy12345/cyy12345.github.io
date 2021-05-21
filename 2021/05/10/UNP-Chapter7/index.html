@@ -10,6 +10,8 @@
 
     <!--Description-->
     
+        <meta name="description" content="Chapter 7SO_LINGER Socket Option7.11 fcntl Functionioctl is talked in Chapter17Chapter16 will discuss non-blocking I/OChapter25 will discuss Signal-dr">
+    
 
     <!--Author-->
     
@@ -18,7 +20,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Yuyang Chen&#39;s Blog">
+        <meta property="og:title" content="UNP Chapter7 Notes">
     
 
     <!--Open Graph Description-->
@@ -29,7 +31,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website">
+        <meta property="og:type" content="article">
     
 
     <!--Page Cover-->
@@ -40,7 +42,7 @@
 
     <!-- Title -->
     
-    <title>UNP - Yuyang Chen&#39;s Blog</title>
+    <title>UNP Chapter7 Notes - Yuyang Chen&#39;s Blog</title>
 
     <!-- Tachyons Core CSS -->
     <link rel="stylesheet" href="//unpkg.com/tachyons/css/tachyons.min.css">
@@ -68,8 +70,6 @@
 <body>
 
 <!-- Main Content -->
-
-
 <!-- Banner -->
 <!-- Banner -->
 <div class="w-100 bg-1 ph5-ns ph3 text-light">
@@ -106,115 +106,113 @@
     <!-- Title -->
     <div class="w-100 mw8 center vh-40 dt">
         <div class="dtc v-mid white">
-            <h1 class="f1-l f2-m tc tc-m tl-ns"># UNP</h1>
-            <p class="f4 fw3 pab-100px tc tc-m tl-ns"></p>
+            <h1 class="f1-l f2-m tc tc-m tl-ns">UNP Chapter7 Notes</h1>
+            <p class="f4 fw3 pab-100px tc tc-m tl-ns">2021-05-10</p>
         </div>
     </div>
 
     <!-- Icon -->
     <div class="relative w-100 mw8 center white dn dn-m db-ns">
-        <i class="header-icon fa fa-folder-open"></i>
+        <i class="header-icon fa fa-file-text-o"></i>
     </div>
 </div>
 
+<!-- Content -->
 <div class="w-100 ph2 ph4-m ph5-l mv5 mv6-l">
     <div class="content">
         <div class="mw8 center">
-            
-                <a href="/2021/05/18/UNP-Chapter1/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">May 2021</span> 
-            
+            <div class="cf">
+                <div class="fl w-100 w-70-l mw7 left fw3 lh-copy pr4-ns pr0-m post-content">
+                    <!-- Tags Vertical -->
+                    
+                        <div class="tags-container-vertical">
+                            <div class="tags-sub-container">
+                                <a class="fw3 ph1 dib" href="/tags/UNP/">#UNP</a> <a class="fw3 ph1 dib" href="/tags/C/">#C++</a> <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Main Post Content -->
+                    <h2 id="Chapter-7"><a href="#Chapter-7" class="headerlink" title="Chapter 7"></a>Chapter 7</h2><h3 id="SO-LINGER-Socket-Option"><a href="#SO-LINGER-Socket-Option" class="headerlink" title="SO_LINGER Socket Option"></a>SO_LINGER Socket Option</h3><h3 id="7-11-fcntl-Function"><a href="#7-11-fcntl-Function" class="headerlink" title="7.11 fcntl Function"></a>7.11 fcntl Function</h3><p>ioctl is talked in Chapter17<br>Chapter16 will discuss non-blocking I/O<br>Chapter25 will discuss Signal-driven I/O</p>
+
+                    
+                    <!-- Tags Bottom -->
+                    
+                        <div class="tags-container-bottom">
+                            <i class="fa fa-tag pr3 text-main-color"></i><a class="fw3 ph1 dib" href="/tags/UNP/">#UNP</a> <a class="fw3 ph1 dib" href="/tags/C/">#C++</a> <a class="fw3 ph1 dib" href="/tags/backend/">#backend</a>
+                        </div>
+                    
+
+                    <!-- Comments -->
+                    
+
+
+
+                </div>
+                <div class="fl w-100 w-30-l center fw3 lh-copy pl4-ns tl black-50">
+                    
+                    <hr class="dn-l mw4 black-50 mt5">
+                    
+                    <!-- Widget 1: About -->
+                    <div class="mt5 mt0-l">
+    <article class="dt db-l mw8 mw8-m mw5-ns center ml0-l bg-white mv3">
+        <div class="dn dtc-m db-l v-mid tc pr4 pr0-l" style="min-width: 6rem;">
+            <img src="/img/img.jpg" class="mb4-l br-100 h3 w3 h4-l w4-l dib" title="Yuyang Chen">
         </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">UNP Chapter1 Notes<span>
-        </span></span></div>
-    </div>
-</a>
-            
-                <a href="/2021/05/18/UNP-Chapter3/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">May 2021</span> 
-            
+        <div class="dtc db-l v-mid lh-copy measure center f6 black-50 tj">
+            My name is Yuyang Chen. My interested area is SDN and embedded system development. Proficient in C/C++ and Java
         </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">UNP Chapter3 Notes<span>
-        </span></span></div>
-    </div>
-</a>
-            
-                <a href="/2021/05/18/UNP-Chapter4/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">May 2021</span> 
-            
-        </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">UNP Chapter3 Notes<span>
-        </span></span></div>
-    </div>
-</a>
-            
-                <a href="/2021/05/10/UNP-Chapter7/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">May 2021</span> 
-            
-        </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">UNP Chapter7 Notes<span>
-        </span></span></div>
-    </div>
-</a>
-            
-                <a href="/2021/05/10/UNP-Chapter6/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">May 2021</span> 
-            
-        </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">UNP Chapter6 Notes<span>
-        </span></span></div>
-    </div>
-</a>
-            
-                <a href="/2021/05/18/UNP-Chapter5/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">May 2021</span> 
-            
-        </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">UNP Chapter3 Notes<span>
-        </span></span></div>
-    </div>
-</a>
-            
-                <a href="/2021/05/18/UNP-Chapter2/">
-    <div class="dt w-100 hover-border-main-color pointer pa3 border-color bl mv3">
-        <div class="dtc v-mid w-20 black-50">
-            
-                <span class="f4 fw3 lh-copy">May 2021</span> 
-            
-        </div>
-        <div class="dtc v-mid w-80 black-70">
-            <span class="f4 fw3 lh-copy">UNP Chapter2 Notes<span>
-        </span></span></div>
-    </div>
-</a>
-            
+    </article>
+</div>
+
+                    <hr class="dn-l mw4 black-50 mt5">
+                    
+                    <!-- Widget 2: Categories -->
+                    
+                        <div class="mt5 tc tl-l">
+    <h3>Categories</h3>
+    
+        <p>
+            <a href="/categories/Reading-notes/">Reading notes</a>
+        </p>
+    
+</div>
+
+
+                        <hr class="dn-l mw4 black-50 mt5">
+                    
+
+                    <!-- Widget 3: Recent Posts -->
+                    <div class="mt5 tc tl-l">
+    <h3>Recent Posts</h3>
+    
+        <p>
+            <a href="/2021/05/18/UNP-Chapter1/">UNP Chapter1 Notes</a>
+        </p>
+    
+        <p>
+            <a href="/2021/05/18/UNP-Chapter3/">UNP Chapter3 Notes</a>
+        </p>
+    
+        <p>
+            <a href="/2021/05/18/UNP-Chapter4/">UNP Chapter3 Notes</a>
+        </p>
+    
+        <p>
+            <a href="/2021/05/18/UNP-Chapter5/">UNP Chapter3 Notes</a>
+        </p>
+    
+        <p>
+            <a href="/2021/05/18/UNP-Chapter2/">UNP Chapter2 Notes</a>
+        </p>
+    
+</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 
 <!-- Footer -->
 <div class="bg-1 ph2 ph5-ns pv5">
